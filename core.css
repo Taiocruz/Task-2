@@ -1,0 +1,657 @@
+
+/*
+   Reset
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, input {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	vertical-align:baseline;
+	background:transparent;
+}
+
+
+
+/*
+   Apply a natural box layout model to all elements
+*/
+html {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+*, *:before, *:after {
+	-webkit-box-sizing:inherit;
+	-moz-box-sizing:inherit;
+	box-sizing:inherit;
+}
+
+
+
+/* ====================================================
+	Document Setup
+   ==================================================== */
+html {
+	min-height:100%;
+	font-family: Arial, Helvetica, sans-serif;
+	color:#4d4d4d;
+	background:#fff;
+
+	/*
+		Set 1rem = 16px
+	*/
+	font-size:16px;
+	line-height:1.5;
+	font-weight:500;
+	-webkit-font-smoothing:antialiased;
+}
+body {
+	min-height:100%;
+	margin:0;
+}
+
+
+
+/* ====================================================
+	Typography
+   ==================================================== */
+h1, h2, h3, h4, h5, h6 {
+	margin:0;
+	font-family:"Open Sans", Arial, Helvetica, sans-serif;
+	font-size:100%;
+	font-weight:700;
+}
+
+
+
+p {
+	margin-bottom:32px;
+	margin-bottom:2rem;
+}
+
+
+
+/*
+   Links
+*/
+a {
+	color:#4a3389;
+	text-decoration:none;
+	background:transparent;
+
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+	transition:all 0.25s ease-in-out;
+}
+a:hover {
+	color:#000;
+}
+
+
+
+/*
+   Selected Text
+*/
+::selection	{
+	background:#4a3389;
+	color:#fff;
+}
+
+
+
+/* ====================================================
+	Grid System
+   ==================================================== */
+
+/*
+   Grid Sections
+*/
+.section {
+	clear:both;
+	padding:32px 0;
+	padding:2rem 0;
+}
+.section:before,
+.section:after {
+    content:"";
+    display:table;
+}
+.section:after {
+    clear:both;
+}
+
+@media (min-width: 768px) {
+
+	.section {
+		padding:64px 0;
+		padding:4rem 0;
+	}
+
+}
+
+
+
+/*
+   Grid Container
+*/
+.container {
+	clear:both;
+	width:100%;
+	max-width:1080px;
+	margin:0 auto;
+}
+.container:before,
+.container:after {
+    content:"";
+    display:table;
+}
+.container:after {
+    clear:both;
+}
+@media (min-width: 768px) {
+	.container {
+		width:720px;
+		width:45rem;
+	}
+}
+@media (min-width: 992px) {
+	.container {
+		width:960px;
+		width:60rem;
+	}
+}
+@media (min-width: 1200px) {
+	.container {
+		width:1080px;
+		width:67.5rem;
+	}
+}
+
+
+/*
+   Grid Blocks
+*/
+*[class$="-block"] {
+	position:relative;
+	margin-bottom:32px;
+	margin-bottom:2rem;
+}
+*[class$="-block"]:last-child {
+	margin-bottom:0;
+}
+
+@media (min-width: 768px) {
+
+	*[class$="-block"] {
+		float:left;
+		margin:0;
+		padding:0 16px;
+		padding:0 1rem;
+	}
+	.one-quarter-block		{ width:25%; }
+	
+
+	.three-quarters-block	{ width:75%; }
+	.full-block				{ width:100%; }
+
+	
+	*[class$="-block"]:first-child 	{ padding-left:0; }
+	*[class$="-block"]:last-child 	{ padding-right:0; }
+}
+
+
+
+/* ====================================================
+	Global Elements
+   ==================================================== */
+
+/*
+   Menus
+*/
+ul.horizontal-navigation {
+	clear:both;
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+ul.horizontal-navigation:before,
+ul.horizontal-navigation:after {
+    content:"";
+    display:table;
+}
+ul.horizontal-navigation:after {
+    clear:both;
+}
+ul.horizontal-navigation  > li {
+	position:relative;
+	float:left;
+}
+
+
+
+/*
+   Widgets
+*/
+.sidebar {
+	position:relative;
+}
+.widget-title {
+	margin-bottom:16px;
+	margin-bottom:1rem;
+	font-size:16px;
+	font-size:1rem;
+	font-weight:300;
+}
+
+.sidebar ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+
+
+/*
+   Forms
+*/
+form {}
+input[type="text"] {
+	width:100%;
+	padding:16px;
+	padding:1rem;
+	font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-size:0.825rem;
+	color:#4a3389;
+	background:#fff;
+	border:1px solid #e2e2e2;
+
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+button,
+.button,
+input[type="submit"] {
+	display:inline-block;
+	padding:12px;
+	padding:0.75rem;
+	font-size:14px;
+	font-size:0.875rem;
+	background:#999;
+	color:#fff;
+	font-weight:700;
+	text-transform:uppercase;
+	border:0;
+	cursor:pointer;
+
+	-webkit-transition:all 0.25s ease-in-out;
+	-moz-transition:all 0.25s ease-in-out;
+	-o-transition:all 0.25s ease-in-out;
+	transition:all 0.25s ease-in-out;
+}
+button:hover,
+.button:hover,
+input[type="submit"]:hover {
+	background:#4a3389;
+	
+	color:#fff;
+}
+
+.widget-form {
+	position:relative;
+}
+
+.widget-form input {
+	width: auto;
+	padding:8px;
+	padding:0.5rem;
+	margin-left: 1rem;
+    	margin-right: 2rem;
+}
+.widget-form button {
+	position:absolute;
+	top:1px;
+	right:1px;
+	bottom:1px;
+	width:32px;
+	padding:0 8px;
+	padding:0 0.5rem;
+	text-align:center;
+}
+
+#register-form {
+    	border: 1px solid black;
+    	padding: 20px;
+    	text-align: center;
+    	position: fixed;
+    	z-index: 999;
+    	left: 35%;
+    	right: 35%;
+    	top: 25%;
+    	background: white;
+    	margin-left: auto;
+    	margin-right: auto;	
+}
+
+#register-form input {
+	margin: 20px 0px 10px 0px;
+}
+
+.reg-form-bg {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background:rgb(255,255,255);
+	background:rgba(255,255,255,0.25);
+	top: 0;
+	left: 0;
+}
+form a {text-decoration:underline;
+}
+
+/* ====================================================
+	Masthead
+   ==================================================== */
+#masthead {
+	background:#4a3389;
+	color:#fff;
+}
+#masthead a {
+	color:inherit;
+}
+
+
+
+/*
+   Branding
+*/
+#branding {
+	margin:16px 0;
+	margin:1rem 0;
+}
+#branding a.logo {
+
+	font-family:"Open Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size:28px;
+	font-size:1.75rem;
+	font-weight:700;
+
+}
+
+@media (min-width: 768px) {
+
+	#branding {
+		float:left;
+		margin:32px 0;
+		margin:2rem 0;
+	}
+
+}
+
+
+
+/*
+   Main Menu
+*/
+#main-menu {
+	
+}
+#main-menu ul.horizontal-navigation > li {
+	
+}
+#main-menu ul.horizontal-navigation > li > a {
+	display:block;
+	padding:8px 16px;
+	padding:0.5rem 1rem;
+	font-family:"Open Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size:20px;
+	font-size:1.25rem;
+	font-weight:300;
+}
+
+#main-menu ul.horizontal-navigation > li.active a,
+	#main-menu  a:hover {
+	background:rgb(255,255,255);
+	background:rgba(255,255,255,0.25);
+}
+
+@media (min-width: 768px) {
+
+	#main-menu {
+		float:right;
+		margin:16px 0;
+		margin:1rem 0;
+	}
+	#main-menu ul.horizontal-navigation > li {
+		margin-left:8px;
+		margin-left:0.5rem;
+		padding:8px;
+		padding:0.5rem;
+	}
+	#main-menu ul.horizontal-navigation > li:first-child {
+		margin-left:0;
+	}
+	#main-menu ul.horizontal-navigation > li > a {
+		padding:8px 16px;
+		padding:0.5rem 1rem;
+	}
+
+}
+
+
+
+/*
+   Page Title
+*/
+#page-title {
+	padding:32px 0;
+	padding:2rem 0;
+}
+#page-title .entry-title {
+	font-family:"Open Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+	font-size:32px;
+	font-size:2rem;
+	font-weight:300;
+	line-height:1;
+}
+#page-title .description {
+	margin:16px 0 0;
+	margin:1rem 0 0;
+}
+
+@media (min-width: 768px) {
+
+	#page-title {
+		padding:64px 0;
+		padding:0.5rem 0;
+	}
+
+}
+
+
+
+/* ====================================================
+	Content
+   ==================================================== */
+
+
+
+/*
+   Post
+*/
+.post {
+	
+}
+.post .entry-header {
+	margin-bottom:16px;
+	margin-bottom:1rem;
+}
+.post .entry-title {
+	margin-bottom:16px;
+	margin-bottom:1rem;
+	font-size:24px;
+	font-size:1.5rem;
+	line-height:1;
+	font-weight:300;
+}
+
+
+@media (min-width: 768px) {
+
+	.post .entry-header,
+	.post .entry-title,
+
+	 {
+		margin-bottom:32px;
+
+		margin-bottom:2rem;
+	}
+
+}
+
+/* ====================================================
+	Sidebar
+   ==================================================== */
+.sidebar {
+	
+}
+.sidebar .widget {
+	margin-bottom:32px;
+	margin-bottom:2rem;
+	padding:12px;
+	padding:0.75rem;
+	font-size:12px;
+	font-size:0.75rem;
+	background:#f7f7f7;
+	color:#999;
+	border:1px solid #e2e2e2;
+	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.25), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.25), 0 0 40px rgba(0, 0, 0, 0.06) inset; 
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.25), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+}
+.sidebar .widget ul {
+	padding:12px;
+	padding:0.75rem;
+	background:#fff;
+	-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.25), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+	-moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.25), 0 0 40px rgba(0, 0, 0, 0.06) inset; 
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.25), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+}
+.sidebar .widget ul li {
+	margin-bottom:4px;
+	margin-bottom:0.25rem;
+}
+.sidebar .widget ul li:last-child {
+	margin-bottom:0;
+}
+
+.sidebar > div:last-child {
+	margin-bottom:0;
+}
+
+
+
+/* ====================================================
+	Footer
+   ==================================================== */
+#footer {
+	position: fixed;
+    	width: 100%;
+    	bottom: 0;
+	padding:16px 0;
+	padding:1rem 0;
+	font-size:12px;
+	font-size:0.75rem;
+	color:#f0ebee;
+	background:#24086d;
+}
+
+
+@media (min-width: 768px) {
+
+	#footer .copyright {
+		float:left;
+	}
+	#footer .attribution {
+		float:right;
+	}
+
+}
+
+
+/* Colour */
+a,
+.post .entry-title,
+.author-name,
+.posts-by-author-title {
+	color:#a215dd;
+}
+
+/* Background Colour */
+#masthead,
+button,
+.button,
+input[type="submit"],
+::selection {
+	background-color:#48006b;
+}
+
+
+
+/* сайдбар */
+
+	
+.visualControl{
+	text-transform: none;
+	margin: 1rem;
+	border: 2px dotted rgb(74, 51, 137);
+	padding: 1rem; }
+
+.visualControl label{ 	
+color: rgb(74, 51, 137);
+font-weight: bold;
+}
+
+.visualControl input {
+	margin:1rem;
+	padding: 0;
+}
+	
+	
+#burger, #remover{
+	font-size:0.8rem;
+	width:10rem;
+	height:1.5rem;
+	text-transform: none;}
+	
+#controledFont	{
+	font-size:16px;
+}
+
+.fontStyle label{ 	
+color: black;
+font-weight:normal;
+}
+
+#fontSize {
+	padding:0.5rem;
+	width:4rem;
+	height:2rem;
+	border:1px solid black;
+}
+
+#colorPeak {	
+	width:2rem;
+	height:2rem;
+	border:1px solid black;
+}
+
+.one-quarter-block {
+	max-width: 300px;
+	overflow-x: hidden;
+}
