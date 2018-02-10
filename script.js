@@ -1,11 +1,11 @@
-//Показ и скртие элемента
+//Показ и скрытие элемента
 function showHide(){
 	var obj = document.getElementById("sidebar");
 
 	//Если css-свойство display none, то:
 
 	if (obj.style.display === "none") {
-        //Показывваем элемент
+        //Показываем элемент
         obj.style.left = 300;
         obj.style.display = "block";
 		var left = 300;
