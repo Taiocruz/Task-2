@@ -56,10 +56,7 @@ function removeLastP() {
     parent.removeChild(children[children.length - 1]);
 }
 
-
-
-//Изменение размера цвета фона
-
+//Изменение цвета фона
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("colorPeak").addEventListener("change", function(){
         var section = document.getElementsByClassName("section");
